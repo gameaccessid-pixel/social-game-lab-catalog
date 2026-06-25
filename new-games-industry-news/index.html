@@ -7,8 +7,8 @@
 
   <title>新作ゲーム×業界ニュース | SOCIAL GAME LAB 動画カタログ</title>
 
-  <meta name="description" content="SOCIAL GAME LABの動画カテゴリ「新作ゲーム×業界ニュース」です。新作ゲーム、アニメ調RPG、中国ゲーム市場、業界ニュース、Tokyo Game Show関連の横断考察動画を整理しています。">
-  <meta name="keywords" content="SOCIAL GAME LAB, 新作ゲーム, 業界ニュース, スマホゲーム, PCゲーム, 中国ゲーム, アニメ調RPG, オープンワールドRPG, Tokyo Game Show, 東京ゲームショウ">
+  <meta name="description" content="SOCIAL GAME LABの動画カテゴリ「新作ゲーム×業界ニュース」です。新作ゲーム、アニメ調RPG、中国ゲーム市場、ゲーム業界ニュース、オープンワールドRPG、βテスト、開発状況を横断的に整理した動画をまとめています。">
+  <meta name="keywords" content="SOCIAL GAME LAB, ダイチ, 新作ゲーム, 業界ニュース, スマホゲーム, PCゲーム, 中国ゲーム, 韓国ゲーム, アニメ調RPG, オープンワールドRPG, アズールプロミリア, NTE, 無限大ANANTA, アークナイツエンドフィールド, 鳴潮, ゼンゼロ">
 
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://gameaccessid-pixel.github.io/social-game-lab-catalog/new-games-industry-news/">
@@ -19,6 +19,10 @@
   <meta property="og:url" content="https://gameaccessid-pixel.github.io/social-game-lab-catalog/new-games-industry-news/">
   <meta property="og:site_name" content="SOCIAL GAME LAB">
 
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="新作ゲーム×業界ニュース | SOCIAL GAME LAB 動画カタログ">
+  <meta name="twitter:description" content="新作ゲーム、業界ニュース、中国ゲーム市場、アニメ調RPG、オープンワールドRPGの動向を横断的に整理した動画カテゴリです。">
+
   <style>
     :root {
       --bg: #0b1020;
@@ -27,7 +31,8 @@
       --text: #e5e7eb;
       --muted: #a7b0c0;
       --accent: #38bdf8;
-      --line: rgba(148, 163, 184, 0.25);
+      --accent2: #facc15;
+      --line: rgba(148, 163, 184, 0.26);
       --white: #ffffff;
     }
 
@@ -35,165 +40,215 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.7;
-      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "YuGothic", Meiryo, sans-serif;
       background:
-        radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 32%),
-        var(--bg);
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 30%),
+        linear-gradient(180deg, #0b1020 0%, #111827 52%, #070b16 100%);
+      color: var(--text);
+      line-height: 1.8;
     }
 
     a {
-      color: inherit;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     .wrap {
-      width: min(1080px, calc(100% - 32px));
+      width: min(1180px, calc(100% - 32px));
       margin: 0 auto;
     }
 
     header {
-      padding: 64px 0 40px;
+      padding: 64px 0 36px;
       border-bottom: 1px solid var(--line);
     }
 
     .label {
-      display: inline-flex;
-      padding: 6px 12px;
+      display: inline-block;
+      padding: 5px 12px;
       border: 1px solid var(--line);
       border-radius: 999px;
-      color: var(--accent);
-      background: rgba(17, 24, 39, 0.78);
+      color: #bae6fd;
       font-size: 13px;
+      letter-spacing: 0.04em;
+      margin-bottom: 18px;
+      background: rgba(56, 189, 248, 0.08);
     }
 
     h1 {
-      margin: 20px 0 14px;
-      font-size: clamp(34px, 6vw, 64px);
-      line-height: 1.08;
-      letter-spacing: -0.04em;
+      font-size: clamp(34px, 5vw, 62px);
+      line-height: 1.12;
+      margin: 0 0 18px;
+      color: var(--white);
+      letter-spacing: -0.03em;
     }
 
     .lead {
-      max-width: 820px;
-      margin: 0;
+      max-width: 900px;
+      font-size: 18px;
       color: var(--muted);
-      font-size: 17px;
+      margin: 0 0 24px;
     }
 
     .links {
       display: flex;
-      flex-wrap: wrap;
       gap: 12px;
-      margin-top: 26px;
+      flex-wrap: wrap;
+      margin-top: 24px;
     }
 
-    .button {
+    .button,
+    .watch-button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 42px;
       padding: 10px 16px;
-      border-radius: 12px;
+      border-radius: 10px;
       background: var(--accent);
-      color: #06121f;
-      text-decoration: none;
-      font-weight: 700;
+      color: #07111f;
+      font-weight: 800;
+      border: 1px solid transparent;
     }
 
     .button.secondary {
-      background: rgba(255, 255, 255, 0.08);
-      color: var(--white);
+      background: transparent;
       border: 1px solid var(--line);
+      color: var(--text);
     }
 
     main {
-      padding: 42px 0 72px;
+      padding: 36px 0 72px;
     }
 
     section {
-      margin-top: 28px;
-      padding: 28px;
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      background: rgba(17, 24, 39, 0.72);
-    }
-
-    section:first-child {
-      margin-top: 0;
+      margin: 0 0 54px;
     }
 
     h2 {
-      margin: 0 0 14px;
-      font-size: 26px;
-      letter-spacing: -0.03em;
+      font-size: clamp(24px, 3vw, 34px);
+      margin: 0 0 12px;
+      color: var(--white);
+      border-left: 4px solid var(--accent);
+      padding-left: 12px;
+    }
+
+    .section-desc {
+      color: var(--muted);
+      max-width: 900px;
+      margin: 0 0 18px;
     }
 
     .note {
-      color: var(--muted);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-      margin-top: 18px;
-    }
-
-    .card {
       padding: 20px;
       border: 1px solid var(--line);
       border-radius: 18px;
-      background: rgba(23, 32, 51, 0.9);
-    }
-
-    .card h3 {
-      margin: 0 0 8px;
-      font-size: 18px;
-    }
-
-    .card p {
-      margin: 0;
+      background: rgba(17, 24, 39, 0.78);
       color: var(--muted);
-      font-size: 15px;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .video-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      background: linear-gradient(180deg, rgba(31, 41, 55, 0.96), rgba(17, 24, 39, 0.96));
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+    }
+
+    .video-category {
+      color: #bae6fd;
+      font-size: 12px;
+      margin-bottom: 8px;
+      letter-spacing: 0.02em;
+    }
+
+    .video-card h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      line-height: 1.5;
+      color: var(--white);
+    }
+
+    .video-card p {
+      color: var(--muted);
+      margin: 0 0 10px;
+      font-size: 14px;
+    }
+
+    .topics {
+      margin: 8px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 13px;
     }
 
     .taglist {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 16px;
+      gap: 7px;
+      margin-top: auto;
+      padding-top: 12px;
     }
 
     .tag {
-      display: inline-flex;
-      padding: 6px 10px;
-      border: 1px solid var(--line);
+      font-size: 12px;
+      line-height: 1.4;
+      padding: 4px 8px;
       border-radius: 999px;
-      color: var(--muted);
-      background: rgba(255, 255, 255, 0.04);
-      font-size: 13px;
+      background: rgba(56, 189, 248, 0.12);
+      color: #bae6fd;
+      border: 1px solid rgba(56, 189, 248, 0.22);
+    }
+
+    .watch-button {
+      margin-top: 14px;
+      font-size: 14px;
+      width: fit-content;
+    }
+
+    .keyword-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
     }
 
     footer {
-      padding: 28px 0 44px;
-      color: var(--muted);
       border-top: 1px solid var(--line);
-      font-size: 13px;
+      padding: 28px 0;
+      color: var(--muted);
+      font-size: 14px;
     }
 
-    @media (max-width: 820px) {
+    @media (max-width: 980px) {
+      .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 680px) {
       header {
-        padding: 52px 0 34px;
+        padding-top: 42px;
       }
 
-      section {
-        padding: 22px;
-      }
-
-      .grid {
+      .video-grid {
         grid-template-columns: 1fr;
       }
 
@@ -214,12 +269,17 @@
     "name": "新作ゲーム×業界ニュース | SOCIAL GAME LAB 動画カタログ",
     "url": "https://gameaccessid-pixel.github.io/social-game-lab-catalog/new-games-industry-news/",
     "description": "SOCIAL GAME LABの新作ゲーム×業界ニュース動画を整理したカテゴリページです。",
+    "inLanguage": "ja",
     "isPartOf": {
       "@type": "WebSite",
       "name": "SOCIAL GAME LAB 動画カタログ",
       "url": "https://gameaccessid-pixel.github.io/social-game-lab-catalog/"
     },
-    "inLanguage": "ja"
+    "publisher": {
+      "@type": "Organization",
+      "name": "SOCIAL GAME LAB",
+      "url": "https://www.youtube.com/@SocialGameLab"
+    }
   }
   </script>
 
@@ -230,120 +290,330 @@
     <div class="wrap">
       <div class="label">SOCIAL GAME LAB / 新作ゲーム×業界ニュース</div>
 
-
+```
   <h1>新作ゲーム×業界ニュース</h1>
 
   <p class="lead">
-    複数の新作タイトルと業界トピックを横断し、ゲームの設計、継続性、市場の流れを整理する動画カテゴリです。<br>
-    新作ゲームを単体で見るだけでなく、今どんな流れが起きているのかをまとめています。
+    複数の新作タイトルと業界トピックを横断し、ゲームの設計・継続性・市場の流れを整理した動画カテゴリです。<br>
+    新作ゲームを単体で見るだけでなく、今ゲーム市場で何が起きているのかを俯瞰します。
   </p>
 
   <div class="links">
     <a class="button" href="https://gameaccessid-pixel.github.io/social-game-lab-catalog/">動画カタログトップへ戻る</a>
     <a class="button secondary" href="https://www.youtube.com/@SocialGameLab" target="_blank" rel="noopener">YouTubeチャンネルを見る</a>
+    <a class="button secondary" href="https://x.com/Social_Game_Lab" target="_blank" rel="noopener">Xを見る</a>
   </div>
 </div>
-
+```
 
   </header>
 
   <main>
     <div class="wrap">
 
-
+```
   <section>
     <h2>このカテゴリについて</h2>
-    <p class="note">
-      このカテゴリでは、注目の新作ゲーム、開発中タイトル、βテスト、業界ニュース、ゲーム市場の変化を横断して整理しています。<br>
-      作品単体の紹介ではなく、複数タイトルを比較しながら「今、ゲーム市場で何が起きているのか」を見ていく動画群です。
-    </p>
+    <div class="note">
+      <p>
+        このページでは、SOCIAL GAME LABで公開している「新作ゲーム×業界ニュース」系の動画を整理しています。
+        新作アクションRPG、アニメ調RPG、オープンワールドRPG、中国ゲーム市場、βテスト、開発状況、ゲームの自由度や継続性などを横断的に扱います。
+      </p>
+      <p>
+        各カードの「YouTubeで見る」から、該当する動画本体へ移動できます。
+      </p>
+    </div>
   </section>
 
   <section>
-    <h2>収録予定の動画テーマ</h2>
+    <h2>掲載動画</h2>
+    <p class="section-desc">
+      新作ゲーム、業界ニュース、ゲーム考察を横断的に扱う動画を12本掲載しています。
+    </p>
 
-    <div class="grid">
-      <article class="card">
-        <h3>新作アクションRPG動向まとめ</h3>
-        <p>βテストや開発状況をもとに、今後の新作アクションRPGの流れを整理した動画です。</p>
+    <div class="video-grid">
+
+      <article class="video-card">
+        <div class="video-category">新作ゲーム×業界ニュース</div>
+        <h3>新作アクションRPG動向まとめ｜βテスト・開発状況を整理</h3>
+        <p>Aniimo、第玖音像店、DokeV、DNFユニバース、リミットゼロ：ブレイカーズなど、注目アクションRPGの現在地を整理した動画です。</p>
+        <ul class="topics">
+          <li>Aniimo</li>
+          <li>第玖音像店</li>
+          <li>DokeV</li>
+          <li>DNFユニバース</li>
+          <li>リミットゼロブレイカーズ</li>
+        </ul>
+        <div class="taglist">
+          <span class="tag">ブレイカーズ</span>
+          <span class="tag">Aniimo</span>
+          <span class="tag">新作ゲーム</span>
+          <span class="tag">アクションRPG</span>
+        </div>
+        <a class="watch-button" href="https://youtu.be/ZQ4VA5PLDXs" target="_blank" rel="noopener">YouTubeで見る</a>
       </article>
 
-      <article class="card">
-        <h3>消えるゲームの共通点</h3>
-        <p>高クオリティでも継続できないゲームに見える共通点を、業界目線で整理した動画です。</p>
+      <article class="video-card">
+        <div class="video-category">新作ゲーム×業界ニュース</div>
+        <h3>消えるゲームの共通点｜高クオリティでも「終わる」</h3>
+        <p>NTE、無限大ANANTA、七つの大罪：Origin、リミットゼロブレイカーズを横断し、完成度競争の先にある「時間を使わせる設計」を考察した動画です。</p>
+        <ul class="topics">
+          <li>Neverness to Everness</li>
+          <li>無限大ANANTA</li>
+          <li>七つの大罪：Origin</li>
+          <li>リミットゼロブレイカーズ</li>
+          <li>Virtual Circle / Project Genie</li>
+        </ul>
+        <div class="taglist">
+          <span class="tag">ゲームニュース</span>
+          <span class="tag">新作ゲーム</span>
+          <span class="tag">NTE</span>
+          <span class="tag">無限大</span>
+        </div>
+        <a class="watch-button" href="https://youtu.be/P0iAZMFwMv4" target="_blank" rel="noopener">YouTubeで見る</a>
       </article>
 
-      <article class="card">
-        <h3>ゲームの自由と余白</h3>
-        <p>オープンワールドやプレイヤーの工夫を軸に、ゲームの自由がなぜ生まれにくくなっているのかを考察した動画です。</p>
+      <article class="video-card">
+        <div class="video-category">新作ゲーム×業界ニュース</div>
+        <h3>自由の罠！エンドフィールドが証明したゲームの「余白」の正体</h3>
+        <p>エンドフィールド、Minecraft、ゼルダ、GTAなどを横断し、ゲームの面白さを生み出す「余白」と自由度の違いを整理した考察動画です。</p>
+        <ul class="topics">
+          <li>自由度には種類がある</li>
+          <li>都市×自由</li>
+          <li>創造の余白</li>
+          <li>Factorio / Satisfactory</li>
+        </ul>
+        <div class="taglist">
+          <span class="tag">ゲーム考察</span>
+          <span class="tag">余白</span>
+          <span class="tag">オープンワールド</span>
+          <span class="tag">エンドフィールド</span>
+        </div>
+        <a class="watch-button" href="https://youtu.be/s-5rs1XvWlg" target="_blank" rel="noopener">YouTubeで見る</a>
       </article>
 
-      <article class="card">
-        <h3>2026年注目新作まとめ</h3>
-        <p>アズールプロミリア、NTE、归环など、今後の勢力図に関わりそうな新作を整理した動画です。</p>
+      <article class="video-card">
+        <div class="video-category">新作ゲーム×業界ニュース</div>
+        <h3>今後のAAA新作がヤバい…今年の勢力図変わるかも</h3>
+        <p>DokeV、Dragon Sword、アズールプロミリア、NTE、归环（帰還）Rewinding Cadenceを横断し、2026年のAAA級オープンワールドRPGの動向を整理した動画です。</p>
+        <ul class="topics">
+          <li>DokeV</li>
+          <li>Dragon Sword</li>
+          <li>アズールプロミリア</li>
+          <li>NTE</li>
+          <li>帰還：Rewinding Cadence</li>
+        </ul>
+        <div class="taglist">
+          <span class="tag">DokeV</span>
+          <span class="tag">NTE</span>
+          <span class="tag">归环</span>
+          <span class="tag">アズールプロミリア</span>
+        </div>
+        <a class="watch-button" href="https://youtu.be/E8hbLwjGReU" target="_blank" rel="noopener">YouTubeで見る</a>
       </article>
 
-      <article class="card">
-        <h3>アニメ調だけでは勝てない時代</h3>
-        <p>アニメ調RPGの競争が激しくなる中で、作品ごとの設計や戦い方の違いを整理した動画です。</p>
+      <article class="video-card">
+        <div class="video-category">新作ゲーム×業界ニュース</div>
+        <h3>エンドフィールドが証明。ゲームの自由はなぜ消えるのか？</h3>
+        <p>原神、Apex、モンハンワイルズ、ゼンゼロ、スカイリムなどを題材に、裏技や自由な遊びがなぜ消えるのかを掘り下げた動画です。</p>
+        <ul class="topics">
+          <li>余白とは何か</li>
+          <li>クイックスワップ</li>
+          <li>ドラゴンストライク</li>
+          <li>タップストレイフ</li>
+          <li>脱法ジップ</li>
+        </ul>
+        <div class="taglist">
+          <span class="tag">エンドフィールド</span>
+          <span class="tag">原神</span>
+          <span class="tag">Apex</span>
+          <span class="tag">ゲーム考察</span>
+        </div>
+        <a class="watch-button" href="https://youtu.be/8OihKRmoKIw" target="_blank" rel="noopener">YouTubeで見る</a>
       </article>
 
-      <article class="card">
-        <h3>IPより人が動く設計</h3>
-        <p>IPの強さだけでなく、ユーザーが遊び続けたくなる設計や導線に注目した動画です。</p>
+      <article class="video-card">
+        <div class="video-category">新作ゲーム×業界ニュース</div>
+        <h3>アニメ調だけじゃ勝てない！2026年新作5本＋NetEase AI統合の衝撃</h3>
+        <p>ビースト・オブ・リンカネーション、Rev.NOiR、Sea of Remnants、Cairn、V Projectを設計思想の視点で整理し、NetEaseのAI統合にも触れた動画です。</p>
+        <ul class="topics">
+          <li>ビースト・オブ・リンカネーション</li>
+          <li>Rev.NOiR</li>
+          <li>Sea of Remnants</li>
+          <li>Cairn</li>
+          <li>V Project</li>
+        </ul>
+        <div class="taglist">
+          <span class="tag">ゲームニュース</span>
+          <span class="tag">AIゲーム</span>
+          <span class="tag">ANANTA</span>
+          <span class="tag">二次元ゲーム</span>
+        </div>
+        <a class="watch-button" href="https://youtu.be/XAIVnCAZJ-c" target="_blank" rel="noopener">YouTubeで見る</a>
       </article>
 
-      <article class="card">
-        <h3>期待の新作ゲーム5本</h3>
-        <p>望月、運命のトリガー、アストラエ・オラティオなど、注目タイトルの見どころを整理した動画です。</p>
+      <article class="video-card">
+        <div class="video-category">新作ゲーム×業界ニュース</div>
+        <h3>アズールプロミリア＆SAO新作も！IPより「人が動く設計」が全てだと思う</h3>
+        <p>グラブルリリンク、SAO新作、ディシディア、元夜十二談、アズールプロミリア、竜宮国を通じて「人が動く理由」を考える動画です。</p>
+        <ul class="topics">
+          <li>GRANBLUE FANTASY: Relink - Endless Ragnarok</li>
+          <li>ソードアートオンライン Echoes of Aincrad</li>
+          <li>ディシディア デュエルム ファイナルファンタジー</li>
+          <li>元夜十二談</li>
+          <li>アズールプロミリア</li>
+        </ul>
+        <div class="taglist">
+          <span class="tag">新作ゲーム</span>
+          <span class="tag">アズールプロミリア</span>
+          <span class="tag">SAO</span>
+          <span class="tag">IP</span>
+        </div>
+        <a class="watch-button" href="https://youtu.be/6FQ5SZ6ETME" target="_blank" rel="noopener">YouTubeで見る</a>
       </article>
 
-      <article class="card">
-        <h3>鳴潮・ゼンゼロ最新動向</h3>
-        <p>大型タイトルの最新動向と、AAA級ではないが気になるアイデア勝負の注目作を整理した動画です。</p>
+      <article class="video-card">
+        <div class="video-category">新作ゲーム×業界ニュース</div>
+        <h3>2026年期待の新作ゲーム5本｜望月・運命のトリガー・アストラエ・オラティオほか</h3>
+        <p>望月、アストラエ・オラティオ、緑夢：時空之声、運命のトリガー、DragonSword : Awakeningをまとめた2026年注目作整理動画です。</p>
+        <ul class="topics">
+          <li>望月</li>
+          <li>アストラエ・オラティオ</li>
+          <li>緑夢：時空之声</li>
+          <li>運命のトリガー</li>
+          <li>DragonSword : Awakening</li>
+        </ul>
+        <div class="taglist">
+          <span class="tag">望月</span>
+          <span class="tag">運命のトリガー</span>
+          <span class="tag">中国ゲーム</span>
+          <span class="tag">韓国ゲーム</span>
+        </div>
+        <a class="watch-button" href="https://youtu.be/YOrhxq9eafE" target="_blank" rel="noopener">YouTubeで見る</a>
       </article>
 
-      <article class="card">
-        <h3>新作オープンワールドRPG動向</h3>
-        <p>βテストや開発状況をもとに、次世代オープンワールドRPGの流れを整理した動画です。</p>
+      <article class="video-card">
+        <div class="video-category">新作ゲーム×業界ニュース</div>
+        <h3>鳴潮・ゼンゼロ最新動向＋AAA級じゃないのに気になる注目作5選</h3>
+        <p>ガーディアンメイデン、Fyoras Soul、Spot Zero、Moon Corona、Project Cを紹介しつつ、鳴潮とゼンゼロの最新動向にも触れた動画です。</p>
+        <ul class="topics">
+          <li>ガーディアンメイデン</li>
+          <li>Fyoras Soul</li>
+          <li>Spot Zero</li>
+          <li>Moon Corona</li>
+          <li>Project C</li>
+        </ul>
+        <div class="taglist">
+          <span class="tag">鳴潮</span>
+          <span class="tag">ゼンレスゾーンゼロ</span>
+          <span class="tag">新作ゲーム</span>
+          <span class="tag">スマホゲーム</span>
+        </div>
+        <a class="watch-button" href="https://youtu.be/saaIKgvYH44" target="_blank" rel="noopener">YouTubeで見る</a>
       </article>
 
-      <article class="card">
-        <h3>2026年序盤の新作予定</h3>
-        <p>1月から2月にかけてリリース予定の新作・注目タイトルをまとめた動画です。</p>
+      <article class="video-card">
+        <div class="video-category">新作ゲーム×業界ニュース</div>
+        <h3>2026年注目｜新作オープンワールドRPGのβテスト・開発状況を整理</h3>
+        <p>NTE、リミットゼロブレイカーズ、白銀の城、無限大ANANTA、アズールプロミリア、エンドフィールドなどの状況を事実ベースで整理した動画です。</p>
+        <ul class="topics">
+          <li>NTE</li>
+          <li>リミットゼロブレイカーズ</li>
+          <li>白銀の城</li>
+          <li>無限大ANANTA</li>
+          <li>アズールプロミリア</li>
+        </ul>
+        <div class="taglist">
+          <span class="tag">2026年注目</span>
+          <span class="tag">オープンワールドRPG</span>
+          <span class="tag">βテスト</span>
+          <span class="tag">開発状況</span>
+        </div>
+        <a class="watch-button" href="https://youtu.be/NlvQ5qKjQH8" target="_blank" rel="noopener">YouTubeで見る</a>
       </article>
+
+      <article class="video-card">
+        <div class="video-category">新作ゲーム×業界ニュース</div>
+        <h3>2026年新作｜次世代アニメ調ゲーム5本が凄すぎる</h3>
+        <p>リミットゼロブレイカーズ、Varsapura、源初之結、MIRESI、アズールプロミリアなど、次世代アニメ調ゲームを業界視点で考察した動画です。</p>
+        <ul class="topics">
+          <li>リミットゼロブレイカーズ</li>
+          <li>Varsapura</li>
+          <li>源初之結</li>
+          <li>MIRESI：視えない未来</li>
+          <li>アズールプロミリア</li>
+        </ul>
+        <div class="taglist">
+          <span class="tag">リミットゼロブレイカーズ</span>
+          <span class="tag">アズールプロミリア</span>
+          <span class="tag">HoYoverse</span>
+          <span class="tag">NTE</span>
+        </div>
+        <a class="watch-button" href="https://youtu.be/X0ORFJgsH-A" target="_blank" rel="noopener">YouTubeで見る</a>
+      </article>
+
+      <article class="video-card">
+        <div class="video-category">新作ゲーム×業界ニュース</div>
+        <h3>2026年序盤｜1〜2月リリース予定の新作・注目タイトルまとめ</h3>
+        <p>DragonSword、Project RX、Heaven Hells、七つの大罪：Origin、天穂のサクナヒメ関連作など、2026年序盤の注目タイトルを整理した動画です。</p>
+        <ul class="topics">
+          <li>DragonSword</li>
+          <li>Project RX</li>
+          <li>Heaven Hells</li>
+          <li>七つの大罪：Origin</li>
+          <li>天穂のサクナヒメ～ヒヌカ巡霊譚～</li>
+        </ul>
+        <div class="taglist">
+          <span class="tag">DragonSword</span>
+          <span class="tag">七つの大罪Origin</span>
+          <span class="tag">新作ゲーム</span>
+          <span class="tag">2026年</span>
+        </div>
+        <a class="watch-button" href="https://youtu.be/TdlsWIr8xUU" target="_blank" rel="noopener">YouTubeで見る</a>
+      </article>
+
     </div>
   </section>
 
   <section>
     <h2>関連ワード</h2>
+    <p class="section-desc">このカテゴリで扱う主なテーマと検索補助ワードです。</p>
 
-    <div class="taglist">
+    <div class="keyword-box">
+      <span class="tag">SOCIAL GAME LAB</span>
       <span class="tag">新作ゲーム</span>
       <span class="tag">業界ニュース</span>
       <span class="tag">スマホゲーム</span>
       <span class="tag">PCゲーム</span>
       <span class="tag">中国ゲーム</span>
-      <span class="tag">アニメ調RPG</span>
+      <span class="tag">韓国ゲーム</span>
       <span class="tag">オープンワールドRPG</span>
-      <span class="tag">NTE</span>
+      <span class="tag">アクションRPG</span>
+      <span class="tag">アニメ調RPG</span>
+      <span class="tag">βテスト</span>
+      <span class="tag">開発状況</span>
+      <span class="tag">ゲーム考察</span>
       <span class="tag">アズールプロミリア</span>
+      <span class="tag">Azur Promilia</span>
+      <span class="tag">NTE</span>
+      <span class="tag">Neverness to Everness</span>
+      <span class="tag">無限大ANANTA</span>
       <span class="tag">アークナイツ：エンドフィールド</span>
       <span class="tag">鳴潮</span>
       <span class="tag">ゼンゼロ</span>
+      <span class="tag">リミットゼロブレイカーズ</span>
     </div>
   </section>
 
 </div>
-
+```
 
   </main>
 
   <footer>
     <div class="wrap">
-      © SOCIAL GAME LAB. Category page for new games and game industry news.
+      <p>© SOCIAL GAME LAB. Category page for new games and game industry news.</p>
     </div>
   </footer>
 </body>
 </html>
-
