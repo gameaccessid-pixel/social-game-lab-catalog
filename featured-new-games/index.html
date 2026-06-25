@@ -1,1 +1,558 @@
+<!DOCTYPE html>
 
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>注目の新作ピックアップ | SOCIAL GAME LAB 動画カタログ</title>
+
+  <meta name="description" content="SOCIAL GAME LABの動画カテゴリ「注目の新作ピックアップ」です。鳴潮、七つの大罪：Origin、デュエットナイトアビス、アークナイツ：エンドフィールド、無限大ANANTA、ドルフロ2、アズールプロミリアなど、単体タイトルのレビューやβテスト所感を整理しています。">
+  <meta name="keywords" content="SOCIAL GAME LAB, ダイチ, 注目の新作ピックアップ, 新作ゲーム, ゲームレビュー, βテスト, 鳴潮, Wuthering Waves, 七つの大罪Origin, デュエットナイトアビス, アークナイツエンドフィールド, 無限大ANANTA, ドルフロ2, アズールプロミリア, Azur Promilia">
+
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://gameaccessid-pixel.github.io/social-game-lab-catalog/featured-new-games/">
+
+  <meta property="og:title" content="注目の新作ピックアップ | SOCIAL GAME LAB 動画カタログ">
+  <meta property="og:description" content="SOCIAL GAME LABの注目新作ピックアップ動画を整理したカテゴリページです。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gameaccessid-pixel.github.io/social-game-lab-catalog/featured-new-games/">
+  <meta property="og:site_name" content="SOCIAL GAME LAB">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="注目の新作ピックアップ | SOCIAL GAME LAB 動画カタログ">
+  <meta name="twitter:description" content="単体タイトルのレビュー、βテスト所感、先行プレイ、アップデート紹介などをまとめた動画カテゴリです。">
+
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #111827;
+      --card: #172033;
+      --text: #e5e7eb;
+      --muted: #a7b0c0;
+      --accent: #38bdf8;
+      --accent2: #facc15;
+      --line: rgba(148, 163, 184, 0.26);
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "YuGothic", Meiryo, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 30%),
+        linear-gradient(180deg, #0b1020 0%, #111827 52%, #070b16 100%);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .wrap {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 64px 0 36px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .label {
+      display: inline-block;
+      padding: 5px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: #bae6fd;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      margin-bottom: 18px;
+      background: rgba(56, 189, 248, 0.08);
+    }
+
+    h1 {
+      font-size: clamp(34px, 5vw, 62px);
+      line-height: 1.12;
+      margin: 0 0 18px;
+      color: var(--white);
+      letter-spacing: -0.03em;
+    }
+
+    .lead {
+      max-width: 900px;
+      font-size: 18px;
+      color: var(--muted);
+      margin: 0 0 24px;
+    }
+
+    .links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .button,
+    .watch-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 16px;
+      border-radius: 10px;
+      background: var(--accent);
+      color: #07111f;
+      font-weight: 800;
+      border: 1px solid transparent;
+    }
+
+    .button.secondary {
+      background: transparent;
+      border: 1px solid var(--line);
+      color: var(--text);
+    }
+
+    main {
+      padding: 36px 0 72px;
+    }
+
+    section {
+      margin: 0 0 54px;
+    }
+
+    h2 {
+      font-size: clamp(24px, 3vw, 34px);
+      margin: 0 0 12px;
+      color: var(--white);
+      border-left: 4px solid var(--accent);
+      padding-left: 12px;
+    }
+
+    .section-desc {
+      color: var(--muted);
+      max-width: 900px;
+      margin: 0 0 18px;
+    }
+
+    .note {
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(17, 24, 39, 0.78);
+      color: var(--muted);
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .video-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      background: linear-gradient(180deg, rgba(31, 41, 55, 0.96), rgba(17, 24, 39, 0.96));
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+    }
+
+    .video-category {
+      color: #bae6fd;
+      font-size: 12px;
+      margin-bottom: 8px;
+      letter-spacing: 0.02em;
+    }
+
+    .video-card h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      line-height: 1.5;
+      color: var(--white);
+    }
+
+    .video-card p {
+      color: var(--muted);
+      margin: 0 0 10px;
+      font-size: 14px;
+    }
+
+    .topics {
+      margin: 8px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .taglist {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: auto;
+      padding-top: 12px;
+    }
+
+    .tag {
+      font-size: 12px;
+      line-height: 1.4;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.12);
+      color: #bae6fd;
+      border: 1px solid rgba(56, 189, 248, 0.22);
+    }
+
+    .watch-button {
+      margin-top: 14px;
+      font-size: 14px;
+      width: fit-content;
+    }
+
+    .keyword-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 28px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 980px) {
+      .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 680px) {
+      header {
+        padding-top: 42px;
+      }
+
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .links {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "注目の新作ピックアップ | SOCIAL GAME LAB 動画カタログ",
+    "url": "https://gameaccessid-pixel.github.io/social-game-lab-catalog/featured-new-games/",
+    "description": "SOCIAL GAME LABの注目の新作ピックアップ動画を整理したカテゴリページです。",
+    "inLanguage": "ja",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "SOCIAL GAME LAB 動画カタログ",
+      "url": "https://gameaccessid-pixel.github.io/social-game-lab-catalog/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SOCIAL GAME LAB",
+      "url": "https://www.youtube.com/@SocialGameLab"
+    }
+  }
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <div class="label">SOCIAL GAME LAB / 注目の新作ピックアップ</div>
+
+
+  <h1>注目の新作ピックアップ</h1>
+
+  <p class="lead">
+    単体タイトルのレビュー、βテスト所感、先行プレイ、アップデート紹介などをまとめた動画カテゴリです。<br>
+    実際に遊んだ感触や、正式リリース前後に見えてきた魅力と気になる点を整理しています。
+  </p>
+
+  <div class="links">
+    <a class="button" href="https://gameaccessid-pixel.github.io/social-game-lab-catalog/">動画カタログトップへ戻る</a>
+    <a class="button secondary" href="https://www.youtube.com/@SocialGameLab" target="_blank" rel="noopener">YouTubeチャンネルを見る</a>
+    <a class="button secondary" href="https://x.com/Social_Game_Lab" target="_blank" rel="noopener">Xを見る</a>
+  </div>
+</div>
+
+
+  </header>
+
+  <main>
+    <div class="wrap">
+
+
+  <section>
+    <h2>このカテゴリについて</h2>
+    <div class="note">
+      <p>
+        このページでは、SOCIAL GAME LABで公開している「注目の新作ピックアップ」系の動画を整理しています。
+        鳴潮、七つの大罪：Origin、デュエットナイトアビス、アークナイツ：エンドフィールド、無限大ANANTA、ドルフロ2、アズールプロミリアなど、単体タイトルに踏み込んだ動画を掲載しています。
+      </p>
+      <p>
+        各カードの「YouTubeで見る」から、該当する動画本体へ移動できます。
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>掲載動画</h2>
+    <p class="section-desc">
+      単体タイトルのレビュー、βテスト所感、先行プレイ、攻略・システム解説を9本掲載しています。
+    </p>
+
+    <div class="video-grid">
+
+      <article class="video-card">
+        <div class="video-category">注目の新作ピックアップ</div>
+        <h3>鳴潮Ver3.1が進化しすぎて別ゲーだった</h3>
+        <p>リリース当初から久々に鳴潮をプレイし、Ver3.1新章環境でどのように進化したのかを新規・復帰目線で整理した動画です。</p>
+        <ul class="topics">
+          <li>鳴潮とは</li>
+          <li>鳴潮の面白いところ</li>
+          <li>音骸とは</li>
+          <li>ガチャの仕様</li>
+          <li>Ver3.1とエイメス</li>
+        </ul>
+        <div class="taglist">
+          <span class="tag">鳴潮</span>
+          <span class="tag">Wuthering Waves</span>
+          <span class="tag">オープンワールド</span>
+          <span class="tag">RPG</span>
+        </div>
+        <a class="watch-button" href="https://youtu.be/qhZQDKNiz4E" target="_blank" rel="noopener">YouTubeで見る</a>
+      </article>
+
+      <article class="video-card">
+        <div class="video-category">注目の新作ピックアップ</div>
+        <h3>七つの大罪：Origin｜尖ってないのに全部が高水準</h3>
+        <p>七つの大罪：Originを一足先にプレイし、グラフィック、アクション、ストーリー、探索、キャラクターの魅力を整理したレビュー動画です。</p>
+        <ul class="topics">
+          <li>七つの大罪Originとは</li>
+          <li>ストーリー</li>
+          <li>戦闘</li>
+          <li>探索</li>
+          <li>武器システム</li>
+        </ul>
+        <div class="taglist">
+          <span class="tag">七つの大罪Origin</span>
+          <span class="tag">ナナオリ</span>
+          <span class="tag">オープンワールドRPG</span>
+          <span class="tag">Netmarble</span>
+        </div>
+        <a class="watch-button" href="https://youtu.be/O_EFHCv3quw" target="_blank" rel="noopener">YouTubeで見る</a>
+      </article>
+
+      <article class="video-card">
+        <div class="video-category">注目の新作ピックアップ</div>
+        <h3>デナアビ始めるなら今！新章「銀星の奔流」</h3>
+        <p>デュエットナイトアビス新バージョン「銀星の奔流」を先行体験し、新キャラ、報酬、新章、新システム、操作改善をまとめた動画です。</p>
+        <ul class="topics">
+          <li>大量無料報酬</li>
+          <li>フローラ／ヒルダ</li>
+          <li>新章ストーリー</li>
+          <li>カラミティアームズ</li>
+          <li>協会システム</li>
+        </ul>
+        <div class="taglist">
+          <span class="tag">デュエットナイトアビス</span>
+          <span class="tag">デナアビ</span>
+          <span class="tag">銀星の奔流</span>
+          <span class="tag">アクションRPG</span>
+        </div>
+        <a class="watch-button" href="https://youtu.be/B2k1qaXbzyo" target="_blank" rel="noopener">YouTubeで見る</a>
+      </article>
+
+      <article class="video-card">
+        <div class="video-category">注目の新作ピックアップ</div>
+        <h3>アークナイツ：エンドフィールド40時間レビュー</h3>
+        <p>アークナイツ：エンドフィールドを40時間プレイし、生成工業、戦闘、探索、育成、ガチャ、エンドコンテンツまで正直に整理したレビュー動画です。</p>
+        <ul class="topics">
+          <li>時間が溶ける理由</li>
+          <li>生成工業システム</li>
+          <li>戦闘とボス戦</li>
+          <li>育成</li>
+          <li>ガチャ</li>
+        </ul>
+        <div class="taglist">
+          <span class="tag">アークナイツ</span>
+          <span class="tag">エンドフィールド</span>
+          <span class="tag">Arknights Endfield</span>
+          <span class="tag">新作ゲーム</span>
+        </div>
+        <a class="watch-button" href="https://youtu.be/4jbPe6iv3Ks" target="_blank" rel="noopener">YouTubeで見る</a>
+      </article>
+
+      <article class="video-card">
+        <div class="video-category">注目の新作ピックアップ</div>
+        <h3>無限大 ANANTA｜β前でこの完成度はヤバい</h3>
+        <p>TGS2025で試遊した無限大ANANTAについて、格闘アクション、カーチェイス、都市探索、NTEとの差別化要素を整理したレビュー動画です。</p>
+        <ul class="topics">
+          <li>ブース構成</li>
+          <li>FTUE</li>
+          <li>格闘</li>
+          <li>カーチェイス</li>
+          <li>NTEとの差別化要素</li>
+        </ul>
+        <div class="taglist">
+          <span class="tag">無限大ANANTA</span>
+          <span class="tag">TGS2025</span>
+          <span class="tag">都市探索</span>
+          <span class="tag">アクションRPG</span>
+        </div>
+        <a class="watch-button" href="https://youtu.be/dnnKKW4CZow" target="_blank" rel="noopener">YouTubeで見る</a>
+      </article>
+
+      <article class="video-card">
+        <div class="video-category">注目の新作ピックアップ</div>
+        <h3>ドルフロ2｜世界観・キャラ・戦略性まで整理</h3>
+        <p>ドールズフロントライン2：エクシリウムの1周年タイミングで、ゲーム概要、キャラクター、新キャラ「サクラ」、イベント内容を整理した動画です。</p>
+        <ul class="topics">
+          <li>ドルフロ2とは</li>
+          <li>戦闘</li>
+          <li>キャラクターの魅力</li>
+          <li>新キャラ：サクラ</li>
+          <li>テーマイベント</li>
+        </ul>
+        <div class="taglist">
+          <span class="tag">ドルフロ2</span>
+          <span class="tag">ドールズフロントライン2</span>
+          <span class="tag">SRPG</span>
+          <span class="tag">HaoPlay</span>
+        </div>
+        <a class="watch-button" href="https://youtu.be/Kga3Juq3iBQ" target="_blank" rel="noopener">YouTubeで見る</a>
+      </article>
+
+      <article class="video-card">
+        <div class="video-category">注目の新作ピックアップ</div>
+        <h3>アズールプロミリア台湾βを30時間プレイレビュー</h3>
+        <p>アズールプロミリア台湾版βテストを約30時間プレイし、キャラ、キボ、探索、農園、クラフト、拠点生産、バトル、マルチ要素を整理した動画です。</p>
+        <ul class="topics">
+          <li>アズールプロミリアとは</li>
+          <li>キャラの良さ</li>
+          <li>キボ</li>
+          <li>拠点とクラフト</li>
+          <li>バトルとマルチ要素</li>
+        </ul>
+        <div class="taglist">
+          <span class="tag">アズールプロミリア</span>
+          <span class="tag">Azur Promilia</span>
+          <span class="tag">蓝色星原</span>
+          <span class="tag">Manjuu Games</span>
+        </div>
+        <a class="watch-button" href="https://www.youtube.com/watch?v=QlASa5tt7Kg" target="_blank" rel="noopener">YouTubeで見る</a>
+      </article>
+
+      <article class="video-card">
+        <div class="video-category">注目の新作ピックアップ</div>
+        <h3>アズールプロミリア｜キボ・印・ブレイクが複雑すぎる？</h3>
+        <p>アズールプロミリア台湾版βテストを約30時間プレイした所感をもとに、ゲームサイクル、キボ、印、ブレイク、編成縛り、拠点クラフトなどのシステム面を整理した動画です。</p>
+        <ul class="topics">
+          <li>ゲームサイクル</li>
+          <li>キボの使い道</li>
+          <li>印とブレイク</li>
+          <li>編成縛り</li>
+          <li>拠点クラフトとキボ派遣</li>
+        </ul>
+        <div class="taglist">
+          <span class="tag">アズールプロミリア</span>
+          <span class="tag">Azur Promilia</span>
+          <span class="tag">キボ</span>
+          <span class="tag">ゲームシステム</span>
+        </div>
+        <a class="watch-button" href="https://youtu.be/5jG0oExlQA4" target="_blank" rel="noopener">YouTubeで見る</a>
+      </article>
+
+      <article class="video-card">
+        <div class="video-category">注目の新作ピックアップ</div>
+        <h3>アークナイツエンドフィールド｜最適な工場構築と失敗しないコツ</h3>
+        <p>アークナイツ：エンドフィールドの工場ライン設計を30時間以上検証し、効率が上がる構築、配置思想、稼働率の落とし穴を整理した攻略動画です。</p>
+        <ul class="topics">
+          <li>協約核心の使い道</li>
+          <li>直線とスクラップ＆ビルド</li>
+          <li>売却の心得</li>
+          <li>上下二段階構造</li>
+          <li>生産ラインの結論</li>
+        </ul>
+        <div class="taglist">
+          <span class="tag">アークナイツ</span>
+          <span class="tag">エンドフィールド</span>
+          <span class="tag">工場ライン</span>
+          <span class="tag">攻略</span>
+        </div>
+        <a class="watch-button" href="https://youtu.be/GTmE28a2Ais" target="_blank" rel="noopener">YouTubeで見る</a>
+      </article>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>関連ワード</h2>
+    <p class="section-desc">このカテゴリで扱う主なテーマと検索補助ワードです。</p>
+
+    <div class="keyword-box">
+      <span class="tag">SOCIAL GAME LAB</span>
+      <span class="tag">注目の新作ピックアップ</span>
+      <span class="tag">新作ゲーム</span>
+      <span class="tag">ゲームレビュー</span>
+      <span class="tag">βテスト</span>
+      <span class="tag">先行プレイ</span>
+      <span class="tag">鳴潮</span>
+      <span class="tag">Wuthering Waves</span>
+      <span class="tag">七つの大罪：Origin</span>
+      <span class="tag">デュエットナイトアビス</span>
+      <span class="tag">アークナイツ：エンドフィールド</span>
+      <span class="tag">Arknights Endfield</span>
+      <span class="tag">無限大ANANTA</span>
+      <span class="tag">ドルフロ2</span>
+      <span class="tag">ドールズフロントライン2</span>
+      <span class="tag">アズールプロミリア</span>
+      <span class="tag">Azur Promilia</span>
+      <span class="tag">蓝色星原</span>
+      <span class="tag">Manjuu Games</span>
+      <span class="tag">キボ</span>
+    </div>
+  </section>
+
+</div>
+
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>© SOCIAL GAME LAB. Category page for featured new games.</p>
+    </div>
+  </footer>
+</body>
+</html>
