@@ -1,1 +1,452 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tokyo Game Show（東京ゲームショウ） | SOCIAL GAME LAB 動画カタログ</title>
+
+  <meta name="description" content="SOCIAL GAME LABのTokyo Game Show（東京ゲームショウ）関連動画カテゴリです。TGS2024、TGS2025の注目タイトル、出展企業、ブース情報、試遊レビュー、会場レポートを整理しています。">
+  <meta name="keywords" content="SOCIAL GAME LAB, ダイチ, Tokyo Game Show, 東京ゲームショウ, TGS, TGS2024, TGS2025, 新作ゲーム, 試遊レビュー, 出展企業, 注目タイトル, 無限大ANANTA, アズールプロミリア, NTE, BREAKERS, アークナイツエンドフィールド">
+
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://gameaccessid-pixel.github.io/social-game-lab-catalog/tokyo-game-show/">
+
+  <meta property="og:title" content="Tokyo Game Show（東京ゲームショウ） | SOCIAL GAME LAB 動画カタログ">
+  <meta property="og:description" content="SOCIAL GAME LABのTokyo Game Show関連動画を整理したカテゴリページです。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gameaccessid-pixel.github.io/social-game-lab-catalog/tokyo-game-show/">
+  <meta property="og:site_name" content="SOCIAL GAME LAB">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tokyo Game Show（東京ゲームショウ） | SOCIAL GAME LAB 動画カタログ">
+  <meta name="twitter:description" content="TGS2024、TGS2025の注目タイトル、出展企業、試遊レビュー、会場レポートを整理した動画カテゴリです。">
+
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #111827;
+      --card: #172033;
+      --text: #e5e7eb;
+      --muted: #a7b0c0;
+      --accent: #38bdf8;
+      --accent2: #facc15;
+      --line: rgba(148, 163, 184, 0.26);
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "YuGothic", Meiryo, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 30%),
+        linear-gradient(180deg, #0b1020 0%, #111827 52%, #070b16 100%);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .wrap {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 64px 0 36px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .label {
+      display: inline-block;
+      padding: 5px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: #bae6fd;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      margin-bottom: 18px;
+      background: rgba(56, 189, 248, 0.08);
+    }
+
+    h1 {
+      font-size: clamp(34px, 5vw, 62px);
+      line-height: 1.12;
+      margin: 0 0 18px;
+      color: var(--white);
+      letter-spacing: -0.03em;
+    }
+
+    .lead {
+      max-width: 900px;
+      font-size: 18px;
+      color: var(--muted);
+      margin: 0 0 24px;
+    }
+
+    .links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .button,
+    .watch-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 16px;
+      border-radius: 10px;
+      background: var(--accent);
+      color: #07111f;
+      font-weight: 800;
+      border: 1px solid transparent;
+    }
+
+    .button.secondary {
+      background: transparent;
+      border: 1px solid var(--line);
+      color: var(--text);
+    }
+
+    main {
+      padding: 36px 0 72px;
+    }
+
+    section {
+      margin: 0 0 54px;
+    }
+
+    h2 {
+      font-size: clamp(24px, 3vw, 34px);
+      margin: 0 0 12px;
+      color: var(--white);
+      border-left: 4px solid var(--accent);
+      padding-left: 12px;
+    }
+
+    .section-desc {
+      color: var(--muted);
+      max-width: 900px;
+      margin: 0 0 18px;
+    }
+
+    .note {
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(17, 24, 39, 0.78);
+      color: var(--muted);
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .video-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      background: linear-gradient(180deg, rgba(31, 41, 55, 0.96), rgba(17, 24, 39, 0.96));
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+    }
+
+    .video-category {
+      color: #bae6fd;
+      font-size: 12px;
+      margin-bottom: 8px;
+      letter-spacing: 0.02em;
+    }
+
+    .video-card h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      line-height: 1.5;
+      color: var(--white);
+    }
+
+    .video-card p {
+      color: var(--muted);
+      margin: 0 0 10px;
+      font-size: 14px;
+    }
+
+    .topics {
+      margin: 8px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .taglist {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: auto;
+      padding-top: 12px;
+    }
+
+    .tag {
+      font-size: 12px;
+      line-height: 1.4;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.12);
+      color: #bae6fd;
+      border: 1px solid rgba(56, 189, 248, 0.22);
+    }
+
+    .watch-button {
+      margin-top: 14px;
+      font-size: 14px;
+      width: fit-content;
+    }
+
+    .keyword-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 28px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 780px) {
+      header {
+        padding-top: 42px;
+      }
+
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .links {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Tokyo Game Show（東京ゲームショウ） | SOCIAL GAME LAB 動画カタログ",
+    "url": "https://gameaccessid-pixel.github.io/social-game-lab-catalog/tokyo-game-show/",
+    "description": "SOCIAL GAME LABのTokyo Game Show関連動画を整理したカテゴリページです。",
+    "inLanguage": "ja",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "SOCIAL GAME LAB 動画カタログ",
+      "url": "https://gameaccessid-pixel.github.io/social-game-lab-catalog/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SOCIAL GAME LAB",
+      "url": "https://www.youtube.com/@SocialGameLab"
+    }
+  }
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <div class="label">SOCIAL GAME LAB / Tokyo Game Show</div>
+
+
+  <h1>Tokyo Game Show<br>東京ゲームショウ</h1>
+
+  <p class="lead">
+    Tokyo Game Show（東京ゲームショウ）の出展企業、注目タイトル、試遊レビュー、ブース情報、会場レポートを整理した動画カテゴリです。<br>
+    TGSで見える新作ゲーム市場の流れや、中国・韓国系タイトルの動向も含めてまとめています。
+  </p>
+
+  <div class="links">
+    <a class="button" href="https://gameaccessid-pixel.github.io/social-game-lab-catalog/">動画カタログトップへ戻る</a>
+    <a class="button secondary" href="https://www.youtube.com/@SocialGameLab" target="_blank" rel="noopener">YouTubeチャンネルを見る</a>
+    <a class="button secondary" href="https://x.com/Social_Game_Lab" target="_blank" rel="noopener">Xを見る</a>
+  </div>
+</div>
+
+
+  </header>
+
+  <main>
+    <div class="wrap">
+
+
+  <section>
+    <h2>このカテゴリについて</h2>
+    <div class="note">
+      <p>
+        このページでは、SOCIAL GAME LABで公開しているTokyo Game Show（東京ゲームショウ）関連動画を整理しています。
+        TGS2024、TGS2025の注目タイトル、出展企業、ブース情報、試遊レビュー、会場で見えた新作ゲームの動向をまとめています。
+      </p>
+      <p>
+        各カードの「YouTubeで見る」から、該当する動画本体へ移動できます。
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>掲載動画</h2>
+    <p class="section-desc">
+      Tokyo Game Show関連の事前まとめ、速報、試遊レビュー、会場レポートを4本掲載しています。
+    </p>
+
+    <div class="video-grid">
+
+      <article class="video-card">
+        <div class="video-category">Tokyo Game Show（東京ゲームショウ）</div>
+        <h3>TGS2025速報｜無限大ANANTA・アズールプロミリア・ブレイカーズほか</h3>
+        <p>9月25日〜28日に幕張メッセで開催されるTGS2025の最新出展情報、注目企業、国内初実機プレイタイトルを整理した速報動画です。</p>
+        <ul class="topics">
+          <li>無限大 ANANTA</li>
+          <li>BREAKERS : UNLOCK THE WORLD</li>
+          <li>アズールプロミリア</li>
+          <li>バラード・オブ・アンタラ</li>
+          <li>Neverness to Everness</li>
+        </ul>
+        <div class="taglist">
+          <span class="tag">TGS2025</span>
+          <span class="tag">東京ゲームショウ</span>
+          <span class="tag">ANANTA</span>
+          <span class="tag">アズールプロミリア</span>
+        </div>
+        <a class="watch-button" href="https://youtu.be/gybikVxpY50" target="_blank" rel="noopener">YouTubeで見る</a>
+      </article>
+
+      <article class="video-card">
+        <div class="video-category">Tokyo Game Show（東京ゲームショウ）</div>
+        <h3>TGS2025注目タイトル完全ガイド</h3>
+        <p>TGS2025直前に、注目タイトル、ブース位置、イベント情報、特典情報をまとめた完全ガイド動画です。</p>
+        <ul class="topics">
+          <li>チェイシング・カレイドライダー</li>
+          <li>アズールプロミリア</li>
+          <li>無限大 ANANTA</li>
+          <li>LIMIT ZERO BREAKERS</li>
+          <li>七つの大罪：Origin</li>
+        </ul>
+        <div class="taglist">
+          <span class="tag">TGS2025</span>
+          <span class="tag">東京ゲームショウ</span>
+          <span class="tag">新作RPG</span>
+          <span class="tag">ブース情報</span>
+        </div>
+        <a class="watch-button" href="https://youtu.be/QXT3sttQ46A" target="_blank" rel="noopener">YouTubeで見る</a>
+      </article>
+
+      <article class="video-card">
+        <div class="video-category">Tokyo Game Show（東京ゲームショウ）</div>
+        <h3>TGS2024試遊レビュー｜ブレイカーズ・NTE・KAZANほか</h3>
+        <p>TGS2024ビジネスデイで、ブレイカーズ、NTE、KAZAN、エンドフィールド、ドルフロ2、運命のトリガーなどを視察・試遊したレポート動画です。</p>
+        <ul class="topics">
+          <li>メカブレイク</li>
+          <li>ブレイカーズ実機プレイ</li>
+          <li>運命のトリガー</li>
+          <li>アークナイツエンドフィールド</li>
+          <li>NTE実機プレイ</li>
+        </ul>
+        <div class="taglist">
+          <span class="tag">TGS2024</span>
+          <span class="tag">試遊レビュー</span>
+          <span class="tag">NTE</span>
+          <span class="tag">BREAKERS</span>
+        </div>
+        <a class="watch-button" href="https://youtu.be/La0OsT6I-WQ" target="_blank" rel="noopener">YouTubeで見る</a>
+      </article>
+
+      <article class="video-card">
+        <div class="video-category">Tokyo Game Show（東京ゲームショウ）</div>
+        <h3>TGS2024注目タイトル12選｜今回のTGSはヤバイ！</h3>
+        <p>TGS2024に出展予定のNTE、BREAKERS、運命のトリガー、エンドフィールドなど、注目タイトル12本を紹介した事前まとめ動画です。</p>
+        <ul class="topics">
+          <li>BREAKERS : UNLOCK THE WORLD</li>
+          <li>運命のトリガー</li>
+          <li>ドールズフロントライン2</li>
+          <li>鳴潮</li>
+          <li>Neverness to Everness</li>
+        </ul>
+        <div class="taglist">
+          <span class="tag">TGS2024</span>
+          <span class="tag">NTE</span>
+          <span class="tag">BREAKERS</span>
+          <span class="tag">エンドフィールド</span>
+        </div>
+        <a class="watch-button" href="https://youtu.be/q0ETKAUJio0" target="_blank" rel="noopener">YouTubeで見る</a>
+      </article>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>関連ワード</h2>
+    <p class="section-desc">このカテゴリで扱う主なテーマと検索補助ワードです。</p>
+
+    <div class="keyword-box">
+      <span class="tag">SOCIAL GAME LAB</span>
+      <span class="tag">Tokyo Game Show</span>
+      <span class="tag">東京ゲームショウ</span>
+      <span class="tag">TGS</span>
+      <span class="tag">TGS2024</span>
+      <span class="tag">TGS2025</span>
+      <span class="tag">幕張メッセ</span>
+      <span class="tag">出展企業</span>
+      <span class="tag">試遊レビュー</span>
+      <span class="tag">会場レポート</span>
+      <span class="tag">新作ゲーム</span>
+      <span class="tag">無限大ANANTA</span>
+      <span class="tag">アズールプロミリア</span>
+      <span class="tag">Azur Promilia</span>
+      <span class="tag">NTE</span>
+      <span class="tag">Neverness to Everness</span>
+      <span class="tag">BREAKERS</span>
+      <span class="tag">アークナイツ：エンドフィールド</span>
+      <span class="tag">運命のトリガー</span>
+    </div>
+  </section>
+
+</div>
+
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>© SOCIAL GAME LAB. Category page for Tokyo Game Show coverage.</p>
+    </div>
+  </footer>
+</body>
+</html>
 
